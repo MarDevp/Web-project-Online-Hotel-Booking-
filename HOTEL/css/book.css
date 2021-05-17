@@ -1,11 +1,24 @@
 .bg{
     background-image: url('../images/2.jpg');
-    height: 120vh;
+    height: 130vh;
     background-size: cover;
 }
 #bground{
     background-image: url('../images/gray.jpg');
     background-size: cover;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; 
+}
+.date{
+    width: 60%;
+}
+.img:hover{
+    
+    box-shadow: -1px 4px 28px 20px rgba(0, 0, 0, 0.856);
 }
 #nag{
     background-color:rgba(228, 225, 222, 0.9);
@@ -60,14 +73,33 @@ body{
     object-fit: cover;
 }
 .room-info{
-    padding-left: 4rem;
+    padding-left: 3rem;
     text-shadow: 2px 2px 5px #000;
-    font-size: 27px;
+    font-size: 31px;
     margin-bottom: 1rem;
     width: 100%;
 }
+.arrow {
+    text-shadow: none;
+    color: black;
+    background-color:lightgray;
+    margin: 1em 0;
+}
+.arrow::after {
+        display: inline-block;
+        padding-left: 8px;
+        content: "\0279E";
+        transition: transform 0.3s ease-out;
+    }
+
+.arrow:hover::after {
+        color: black;
+        background-color: lightgray;
+            transform: translateX(5px);
+    
+}
 @media(max-width:768px){
-	.content{ 
+	.content { 
        width: 90%;
        font-size:80% ;
 	}
