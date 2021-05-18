@@ -82,7 +82,7 @@ body{
 .arrow {
     text-shadow: none;
     color: black;
-    background-color:lightgray;
+    background-color:rgba(211, 211, 211, 0.884);
     margin: 1em 0;
 }
 .arrow::after {
@@ -94,7 +94,7 @@ body{
 
 .arrow:hover::after {
         color: black;
-        background-color: lightgray;
+        background-color: rgba(211, 211, 211, 0.123);
             transform: translateX(5px);
     
 }
