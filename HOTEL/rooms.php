@@ -13,15 +13,15 @@ if ($result) {
   $rooms_left = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_free_result($result);
 }
+if (isset($_POST['search'])) {
+
 // getting non available rooms
 $result = "SELECT id FROM available_rooms WHERE is_available=0";
 $result = mysqli_query($conn, $result);
-if ($result) {
+if (mysqli_num_rows($result) > 0) {
   $booked_rooms = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_free_result($result);
-}
 
-if (isset($_POST['search'])) {
   // dates entered by the user 
   $date1 = mysqli_real_escape_string($conn, $_POST['date1']);
   $date2 = mysqli_real_escape_string($conn, $_POST['date2']);
@@ -43,6 +43,7 @@ if (isset($_POST['search'])) {
       }
     }
   }
+}
   print_r($rooms_left);
   mysqli_free_result($result);
   mysqli_close($conn);
