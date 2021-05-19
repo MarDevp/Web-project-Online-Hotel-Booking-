@@ -44,7 +44,6 @@ if (mysqli_num_rows($result) > 0) {
     }
   }
 }
-  print_r($rooms_left);
   mysqli_free_result($result);
   mysqli_close($conn);
 } ?>
